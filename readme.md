@@ -42,5 +42,7 @@ This repository uses the MIT license.
 
 ## Credits
 
+- Washi for [AsmResolver](https://github.com/Washi1337/AsmResolver)
+- [Sharprompt](https://github.com/shibayan/Sharprompt)
 - The authors of ['Virtual Code Folding'](https://ieeexplore.ieee.org/abstract/document/9151995/).
 - [KoiVM](https://github.com/yck1509/KoiVM). Absolutely love the way yck organized their virtualizer. Took heavy inspiration on the structural side of things.
