@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldingChair.CLI", "FoldingChair.CLI\FoldingChair.CLI.csproj", "{D5B85A45-82BB-4EE7-9D5B-3C49E08893B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldingChair.Engine", "FoldingChair.Engine\FoldingChair.Engine.csproj", "{773AEEF9-D40A-4A2C-99AF-FE63FF1866E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldingChair.CLI", "FoldingChair.CLI\FoldingChair.CLI.csproj", "{4C84580B-9216-4619-87A7-1C7038D078EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D5B85A45-82BB-4EE7-9D5B-3C49E08893B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5B85A45-82BB-4EE7-9D5B-3C49E08893B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5B85A45-82BB-4EE7-9D5B-3C49E08893B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5B85A45-82BB-4EE7-9D5B-3C49E08893B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773AEEF9-D40A-4A2C-99AF-FE63FF1866E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773AEEF9-D40A-4A2C-99AF-FE63FF1866E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773AEEF9-D40A-4A2C-99AF-FE63FF1866E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773AEEF9-D40A-4A2C-99AF-FE63FF1866E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C84580B-9216-4619-87A7-1C7038D078EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C84580B-9216-4619-87A7-1C7038D078EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C84580B-9216-4619-87A7-1C7038D078EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C84580B-9216-4619-87A7-1C7038D078EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

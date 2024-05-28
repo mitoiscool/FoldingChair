@@ -16,3 +16,8 @@
 /FoldingChair.CLI/bin/
 /FoldingChair.CLI/obj/
 
+# FoldingChair.Engine
+/FoldingChair.Engine/bin/
+/FoldingChair.Engine/obj/
+
+
