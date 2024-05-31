@@ -50,6 +50,9 @@ public class ConsoleLogger : ILogger
             )
             + msg
         );
+        
+        // close on fatal
+        Environment.Exit(-1);
     }
 
     public void Verbose(string msg)

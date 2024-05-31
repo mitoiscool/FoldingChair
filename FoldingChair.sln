@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldingChair.Engine", "Fold
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldingChair.CLI", "FoldingChair.CLI\FoldingChair.CLI.csproj", "{4C84580B-9216-4619-87A7-1C7038D078EF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{71AAF1E6-FEE2-4B38-B756-2ADFFF96FAB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02130559-E594-4456-AD60-2E056FF7839A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldingChair.Tests.NetCore.Arithmetic", "FoldingChair.Tests.NetCore.Arithmetic\FoldingChair.Tests.NetCore.Arithmetic.csproj", "{824D4A2F-68AF-4E41-84E3-167E6381BE4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,13 @@ Global
 		{4C84580B-9216-4619-87A7-1C7038D078EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C84580B-9216-4619-87A7-1C7038D078EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C84580B-9216-4619-87A7-1C7038D078EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824D4A2F-68AF-4E41-84E3-167E6381BE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824D4A2F-68AF-4E41-84E3-167E6381BE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824D4A2F-68AF-4E41-84E3-167E6381BE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824D4A2F-68AF-4E41-84E3-167E6381BE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02130559-E594-4456-AD60-2E056FF7839A} = {71AAF1E6-FEE2-4B38-B756-2ADFFF96FAB7}
+		{824D4A2F-68AF-4E41-84E3-167E6381BE4C} = {02130559-E594-4456-AD60-2E056FF7839A}
 	EndGlobalSection
 EndGlobal
