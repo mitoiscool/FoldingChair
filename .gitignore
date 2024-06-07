@@ -5,3 +5,11 @@
 # FoldingChair.Engine
 /FoldingChair.Engine/bin/
 /FoldingChair.Engine/obj/
+
+# FoldingChair.RT
+/FoldingChair.RT/bin/
+/FoldingChair.RT/obj/
+
+# FoldingChair.Tests.NetCore
+/FoldingChair.Tests.NetCore.Arithmetic/bin/
+/FoldingChair.Tests.NetCore.Arithmetic/obj/
