@@ -16,10 +16,11 @@ ConsoleLogger log = new ConsoleLogger();
 
 // validate args, assume first is always module path
 
-if(args.Length == 0)
+if (args.Length == 0)
     log.Fatal("Insufficient args provided. Please refer to the documentation.");
 
-ModuleDefinition module = new ModuleDefinition(""); // probably a bad way of initializing this, however my ide hates when I make this null.
+ModuleDefinition
+    module = new ModuleDefinition(""); // probably a bad way of initializing this, however my ide hates when I make this null.
 Dictionary<string, MethodDefinition> methodNameCache = new Dictionary<string, MethodDefinition>();
 
 try
@@ -45,17 +46,17 @@ Dictionary<string, string[]> typeMethodSelectionCache = new Dictionary<string, s
 while (shouldTypeSearch)
 {
     Console.Clear();
-    
+
     log.Info("Selecting methods to virtualize for module: " + module.Name.ToString().Pastel(Color.LawnGreen));
     log.Info(
-            typeMethodSelectionCache.SelectMany(x => x.Value).Count()
-        .ToString().Pastel(Color.LawnGreen) + " methods selected.");
+        typeMethodSelectionCache.SelectMany(x => x.Value).Count()
+            .ToString().Pastel(Color.LawnGreen) + " methods selected.");
     log.Warn("Please note that incompatible members are automatically hidden.");
-    
+
     var selectedTypeString = Prompt.Select("Select a type:", module.GetAllTypes()
-        .Where(ShouldShowType)
-        .Select(x => x.FullName.ToString()) // select all names of types in module
-        .OrderBy(c => c, StringComparer.Ordinal), 10 // sort alphabetically
+            .Where(ShouldShowType)
+            .Select(x => x.FullName.ToString()) // select all names of types in module
+            .OrderBy(c => c, StringComparer.Ordinal), 10 // sort alphabetically
     );
 
     TypeDefinition selectedType = LocateType(selectedTypeString);
@@ -67,11 +68,10 @@ while (shouldTypeSearch)
     else
     {
         // handle method selection
-        
+
         // ensure cached record exists
         typeMethodSelectionCache.TryAdd(selectedTypeString, Array.Empty<string>());
-        
-        
+
 
         var selectedMethodStrings = Prompt.MultiSelect("Select methods within this class to virtualize:",
             selectedType.Methods
@@ -79,7 +79,6 @@ while (shouldTypeSearch)
                 .OrderBy(c => c.Name.ToString(), StringComparer.Ordinal) // Sort alphabetically
                 .Select(GenerateMethodName), // Generate pretty method names to be displayed
             8, 0, int.MaxValue, typeMethodSelectionCache[selectedTypeString]
-            
         );
 
         typeMethodSelectionCache[selectedTypeString] = selectedMethodStrings.ToArray(); // INCLUDE PARAMS FOR OVERLOADS
@@ -96,10 +95,9 @@ while (shouldTypeSearch)
 
 selectedMethods.AddRange(
     typeMethodSelectionCache.SelectMany(x => x.Value).Select(GetMethodFromName)
-    );
+);
 
 log.Success($"Resolved {selectedMethods.Count} target methods for virtualization.");
-
 
 
 TypeDefinition LocateType(string name)
@@ -115,8 +113,6 @@ TypeDefinition LocateType(string name)
     }
 }
 
-
-
 string GenerateMethodName(MethodDefinition def)
 {
     StringBuilder sb = new StringBuilder();
@@ -130,7 +126,8 @@ string GenerateMethodName(MethodDefinition def)
     if (def.IsStatic)
         sb.Append("static ".Pastel(Color.YellowGreen));
 
-    if (!def.Signature.ReturnsValue) // sig could be null, however should be automatically hidden so we would not get to this point
+    if (!def.Signature
+            .ReturnsValue) // sig could be null, however should be automatically hidden so we would not get to this point
         sb.Append("void ".Pastel(Color.DimGray));
 
     sb.Append($"{def.Name} ".Pastel(Color.White));
@@ -138,9 +135,9 @@ string GenerateMethodName(MethodDefinition def)
     sb.Append('(');
 
     sb.Append(
-        string.Join(", ", def.Parameters.Select(p => 
-        $"{p.ParameterType.Name}".Pastel(p.Index % 2 == 0 ? Color.DarkGray : Color.Gray))));
-    
+        string.Join(", ", def.Parameters.Select(p =>
+            $"{p.ParameterType.Name}".Pastel(p.Index % 2 == 0 ? Color.DarkGray : Color.Gray))));
+
     sb.Append(')');
 
     var name = sb.ToString();
@@ -159,7 +156,9 @@ MethodDefinition GetMethodFromName(string name)
 
 bool ShouldShowMethod(MethodDefinition def)
 {
-    return def.HasMethodBody && def.Signature != null; // will add more clauses once I think of them. Potential unsupported opcode check??
+    return
+        def.HasMethodBody &&
+        def.Signature != null; // will add more clauses once I think of them. Potential unsupported opcode check??
 }
 
 bool ShouldShowType(TypeDefinition type)

@@ -6,16 +6,18 @@ namespace FoldingChair.Engine;
 
 public class Context
 {
-    public Context(ModuleDefinition mod, Settings settings, ModuleDefinition runtimeModule)
+    public Context(ModuleDefinition mod, Settings settings, ModuleDefinition runtimeModule, ILogger logger)
     {
         Module = mod;
         Settings = settings;
         RuntimeModule = new RuntimeModule(runtimeModule);
+        Logger = logger;
     }
 
     public RuntimeModule RuntimeModule;
     public ModuleDefinition Module;
     public Settings Settings;
+    public ILogger Logger;
     
     // random, probably best to put in a separate class but it is so nice to just have a random available from ctx
     private readonly Random _rnd = new();

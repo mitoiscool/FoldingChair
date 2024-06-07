@@ -12,4 +12,14 @@
 
 
 
+    <ItemGroup>
+      <ProjectReference Include="..\FoldingChair.Runtime\FoldingChair.Runtime.csproj" />
+    </ItemGroup>
+
+
+
+
+
+
+
 </Project>
