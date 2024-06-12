@@ -1,15 +1,17 @@
 # FoldingChair.CLI
-/FoldingChair.CLI/bin/
-/FoldingChair.CLI/obj/
+FoldingChair.CLI/bin/
+FoldingChair.CLI/obj/
 
 # FoldingChair.Engine
-/FoldingChair.Engine/bin/
-/FoldingChair.Engine/obj/
+FoldingChair.Engine/bin/
+FoldingChair.Engine/obj/
 
-# FoldingChair.RT
-/FoldingChair.RT/bin/
-/FoldingChair.RT/obj/
+# FoldingChair.Runtime
+FoldingChair.Runtime/bin/
+FoldingChair.Runtime/obj/
 
 # FoldingChair.Tests.NetCore
-/FoldingChair.Tests.NetCore.Arithmetic/bin/
-/FoldingChair.Tests.NetCore.Arithmetic/obj/
+FoldingChair.Tests.NetCore.Arithmetic/bin/
+FoldingChair.Tests.NetCore.Arithmetic/obj/
+FoldingChair.sln.DotSettings.user
+FoldingChair.sln.DotSettings

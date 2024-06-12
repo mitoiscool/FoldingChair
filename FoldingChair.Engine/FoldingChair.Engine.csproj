@@ -22,4 +22,21 @@
 
 
 
+    <ItemGroup>
+      <Reference Include="Echo">
+        <HintPath>..\deps\Echo.dll</HintPath>
+      </Reference>
+      <Reference Include="Echo.ControlFlow">
+        <HintPath>..\deps\Echo.ControlFlow.dll</HintPath>
+      </Reference>
+      <Reference Include="Echo.DataFlow">
+        <HintPath>..\deps\Echo.DataFlow.dll</HintPath>
+      </Reference>
+      <Reference Include="Echo.Platforms.AsmResolver">
+        <HintPath>..\deps\Echo.Platforms.AsmResolver.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+
+
 </Project>
